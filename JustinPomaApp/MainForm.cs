@@ -16,7 +16,7 @@ namespace JustinPomaApp
         {
             InitializeComponent();
 
-            UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful");
+            //UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful");
             barStaticItem2.Caption = "Version v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
@@ -33,7 +33,8 @@ namespace JustinPomaApp
 
         private void btnTimeLine_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GanttForm form = new GanttForm();
+            //GanttForm form = new GanttForm();
+            CalendarGanttForm form = new CalendarGanttForm();
             form.ShowDialog();
         }
     }
