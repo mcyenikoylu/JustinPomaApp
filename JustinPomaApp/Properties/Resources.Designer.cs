@@ -79,5 +79,15 @@ namespace JustinPomaApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ica_museum_photo_by_arko_9995_medres_1 {
+            get {
+                object obj = ResourceManager.GetObject("ica-museum-photo-by-arko-9995-medres-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

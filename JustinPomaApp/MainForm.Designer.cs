@@ -33,11 +33,11 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.btnCalendar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTimeLine = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.btnTimeLine = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +59,10 @@
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(758, 154);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // barStaticItem1
             // 
@@ -82,6 +84,14 @@
             this.btnCalendar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCalendar.ImageOptions.SvgImage")));
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalendar_ItemClick);
+            // 
+            // btnTimeLine
+            // 
+            this.btnTimeLine.Caption = "Time Line";
+            this.btnTimeLine.Id = 4;
+            this.btnTimeLine.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTimeLine.ImageOptions.SvgImage")));
+            this.btnTimeLine.Name = "btnTimeLine";
+            this.btnTimeLine.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTimeLine_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -115,14 +125,6 @@
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(758, 22);
-            // 
-            // btnTimeLine
-            // 
-            this.btnTimeLine.Caption = "Time Line";
-            this.btnTimeLine.Id = 4;
-            this.btnTimeLine.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTimeLine.ImageOptions.SvgImage")));
-            this.btnTimeLine.Name = "btnTimeLine";
-            this.btnTimeLine.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTimeLine_ItemClick);
             // 
             // MainForm
             // 
