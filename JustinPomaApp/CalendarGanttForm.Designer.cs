@@ -68,7 +68,7 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Time Line";
             // 
             // ribbonPageGroup1
             // 
@@ -92,7 +92,6 @@
             // schedulerSplitContainerControl
             // 
             this.schedulerSplitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.schedulerSplitContainerControl.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.schedulerSplitContainerControl.Location = new System.Drawing.Point(0, 154);
             this.schedulerSplitContainerControl.Name = "schedulerSplitContainerControl";
             this.schedulerSplitContainerControl.Panel1.Controls.Add(this.resourcesTree1);
@@ -100,7 +99,7 @@
             this.schedulerSplitContainerControl.Panel2.Controls.Add(this.schedulerControl1);
             this.schedulerSplitContainerControl.Panel2.Text = "Panel2";
             this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1013, 632);
-            this.schedulerSplitContainerControl.SplitterPosition = 828;
+            this.schedulerSplitContainerControl.SplitterPosition = 189;
             this.schedulerSplitContainerControl.TabIndex = 5;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
             // 
@@ -115,7 +114,7 @@
             this.resourcesTree1.Name = "resourcesTree1";
             this.resourcesTree1.OptionsBehavior.Editable = false;
             this.resourcesTree1.SchedulerControl = this.schedulerControl1;
-            this.resourcesTree1.Size = new System.Drawing.Size(175, 632);
+            this.resourcesTree1.Size = new System.Drawing.Size(189, 632);
             this.resourcesTree1.TabIndex = 0;
             // 
             // colResID
@@ -141,7 +140,7 @@
             this.schedulerControl1.Location = new System.Drawing.Point(0, 0);
             this.schedulerControl1.MenuManager = this.ribbon;
             this.schedulerControl1.Name = "schedulerControl1";
-            this.schedulerControl1.Size = new System.Drawing.Size(828, 632);
+            this.schedulerControl1.Size = new System.Drawing.Size(814, 632);
             this.schedulerControl1.Start = new System.DateTime(2024, 4, 17, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 3;
             this.schedulerControl1.Text = "schedulerControl1";
@@ -162,7 +161,7 @@
             this.Name = "CalendarGanttForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "CalendarGanttForm";
+            this.Text = "Time Line";
             this.Load += new System.EventHandler(this.CalendarGanttForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).EndInit();

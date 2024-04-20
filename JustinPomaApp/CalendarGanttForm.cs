@@ -35,8 +35,6 @@ namespace JustinPomaApp
 
         private void CalendarGanttForm_Load(object sender, EventArgs e)
         {
-            //schedulerDataStorage1.CreateAppointment = new myDataSource().dbAppointments;
-
             InitResources();
             InitAppointments();
             InitDependencies();
@@ -101,91 +99,4 @@ namespace JustinPomaApp
             this.schedulerDataStorage1.Appointments.DataSource = CustomAppointmentList;
         }
     }
-
-    //public class myDataSource
-    //{
-    //    public List<dbTaskDependencies> dbTaskDependencies;
-    //    public List<dbResources> dbResources;
-    //    public List<dbAppointments> dbAppointments;
-    //}
-
-    //public class dbTaskDependencies
-    //{
-    //    public int Id { get; set; }
-    //    public int ParentId { get; set; }
-    //    public int DependentId { get; set; }
-    //    public int Type { get; set; }
-
-    //    public dbTaskDependencies(int Id_, int ParentId_, int DependentId_, int Type_)
-    //    {
-    //        this.Id = Id_;
-    //        this.ParentId = ParentId_;
-    //        this.DependentId = DependentId_;
-    //        this.Type = Type_;
-    //    }
-    //}
-
-    //public class dbResources
-    //{
-    //    public int Id { get; set; }
-    //    public int IdSort { get; set; }
-    //    public int ParentId { get; set; }
-    //    public string Description { get; set; }
-    //    public int Color { get; set; }
-    //    public byte[] image { get; set; }
-    //    public string CustomField1 { get; set; }
-
-    //    public dbResources(int Id_, int IdSort_, int ParentId_, string Description_, int Color_, byte[] image_, string CustomField1_)
-    //    {
-    //        this.Id = Id_;
-    //        this.IdSort = IdSort_;
-    //        this.ParentId = ParentId_;
-    //        this.Description = Description_;
-    //        this.Color = Color_;
-    //        this. = _;
-    //        this.CustomField1 = CustomField1_;
-    //    }
-    //}
-
-    //public class dbAppointments
-    //{
-    //    public int UniqueId { get; set; }
-    //    public int Type { get; set; }
-    //    public DateTime StartDate { get; set; }
-    //    public DateTime EndDate { get; set; }
-    //    public bool AllDay { get; set; }
-    //    public string Subject { get; set; }
-    //    public string Location { get; set; }
-    //    public string Description { get; set; }
-    //    public int Status { get; set; }
-    //    public int Label { get; set; }
-    //    public int ResourceId { get; set; }
-    //    public string ResourceIds { get; set; }
-    //    public string ReminderInfo { get; set; }
-    //    public string RecurrenceInfo { get; set; }
-    //    public int PercentComplete { get; set; }
-    //    public string TimeZoneId { get; set; }
-    //    public string CustomField1 { get; set; }
-
-    //    public dbAppointments(int UniqueId_, int Type_, DateTime StartDate_, DateTime EndDate_, bool AllDay_, string Subject_, string Location_, string Description_, int Status_, int Label_, int ResourceId_, string ResourceIds_, string ReminderInfo_, string RecurrenceInfo_, int PercentComplete_, string TimeZoneId_, string CustomField1_)
-    //    {
-    //        this.UniqueId = UniqueId_;
-    //        this.Type = Type_;
-    //        this.StartDate = StartDate_;
-    //        this.EndDate = EndDate_;
-    //        this.AllDay = AllDay_;
-    //        this.Subject = Subject_;
-    //        this.Location = Location_;
-    //        this.Description = Description_;
-    //        this.Status = Status_;
-    //        this.Label = Label_;
-    //        this.ResourceId = ResourceId_;
-    //        this.ResourceIds = ResourceIds_;
-    //        this.ReminderInfo = ReminderInfo_;
-    //        this.RecurrenceInfo = RecurrenceInfo_;
-    //        this.PercentComplete = PercentComplete_;
-    //        this.TimeZoneId = TimeZoneId_;
-    //        this.CustomField1 = CustomField1_;
-    //    }
-    //}
 }
