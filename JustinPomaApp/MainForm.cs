@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.LookAndFeel;
 
 namespace JustinPomaApp
 {
@@ -15,8 +16,8 @@ namespace JustinPomaApp
         {
             InitializeComponent();
 
+            UserLookAndFeel.Default.SetSkinStyle("Office 2019 Colorful");
             barStaticItem2.Caption = "Version v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -36,8 +36,9 @@
             this.btnTimeLine = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.btnAppInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHelpDoc = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +52,14 @@
             this.barStaticItem1,
             this.barStaticItem2,
             this.btnCalendar,
-            this.btnTimeLine});
+            this.btnTimeLine,
+            this.btnAppInfo,
+            this.btnHelpDoc});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 5;
+            this.ribbonControl1.MaxItemId = 7;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.btnAppInfo);
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.btnHelpDoc);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
@@ -96,8 +101,7 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Main";
             // 
@@ -110,13 +114,6 @@
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Action Group";
             // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.AllowTextClipping = false;
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
-            this.ribbonPageGroup2.Text = "Favorites";
-            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
@@ -125,6 +122,20 @@
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(758, 22);
+            // 
+            // btnAppInfo
+            // 
+            this.btnAppInfo.Caption = "Application Information";
+            this.btnAppInfo.Id = 5;
+            this.btnAppInfo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAppInfo.ImageOptions.SvgImage")));
+            this.btnAppInfo.Name = "btnAppInfo";
+            // 
+            // btnHelpDoc
+            // 
+            this.btnHelpDoc.Caption = "User Manual Document";
+            this.btnHelpDoc.Id = 6;
+            this.btnHelpDoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHelpDoc.ImageOptions.SvgImage")));
+            this.btnHelpDoc.Name = "btnHelpDoc";
             // 
             // MainForm
             // 
@@ -136,6 +147,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Poma";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -154,9 +166,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btnCalendar;
         private DevExpress.XtraBars.BarButtonItem btnTimeLine;
+        private DevExpress.XtraBars.BarButtonItem btnAppInfo;
+        private DevExpress.XtraBars.BarButtonItem btnHelpDoc;
     }
 }
 
