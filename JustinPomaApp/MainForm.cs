@@ -17,6 +17,7 @@ namespace JustinPomaApp
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         //string InventoryCategoryFormOpenedMessageBox = "You cannot open a new marketing search because another marketing search page is open.";
+        RibbonPage ownPage = null;
 
         public MainForm()
         {
@@ -60,9 +61,8 @@ namespace JustinPomaApp
                 f.Ribbon.HideApplicationButtonContentControl();
                 f.Ribbon.MdiMergeStyle = RibbonMdiMergeStyle.Always;
                 f.MdiParent = MainForm.ActiveForm;
-                f.Show();
-                f.Ribbon.SelectedPage = f.Ribbon.Pages[0];
                 f.Ribbon.SelectedPage.Tag = tag;
+                f.Show();
             }
             catch (Exception ex)
             {
@@ -175,6 +175,23 @@ namespace JustinPomaApp
             {
                
             }
+        }
+
+        private void ribbonControl1_Merge(object sender, RibbonMergeEventArgs e)
+        {
+            ribbonControl1.SelectedPage = Ribbon.MergedPages[0];
+
+        }
+
+        private void ribbonControl1_UnMerge(object sender, RibbonMergeEventArgs e)
+        {
+            ribbonControl1.SelectedPage = ownPage;
+
+        }
+
+        private void ribbonControl1_ShowCustomizationMenu(object sender, RibbonCustomizationMenuEventArgs e)
+        {
+            e.ShowCustomizationMenu = false;
         }
     }
 }
