@@ -68,7 +68,7 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Time Line";
+            this.ribbonPage1.Text = "Timeline";
             // 
             // ribbonPageGroup1
             // 
@@ -161,7 +161,7 @@
             this.Name = "CalendarGanttForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Time Line";
+            this.Text = "Timeline";
             this.Load += new System.EventHandler(this.CalendarGanttForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).EndInit();

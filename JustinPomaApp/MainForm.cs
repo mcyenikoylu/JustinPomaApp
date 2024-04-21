@@ -115,7 +115,7 @@ namespace JustinPomaApp
             }
             return null;
         }
-        #endregion
+       
 
         private void xtraTabbedMdiManager1_SelectedPageChanged(object sender, EventArgs e)
         {
@@ -192,6 +192,19 @@ namespace JustinPomaApp
         private void ribbonControl1_ShowCustomizationMenu(object sender, RibbonCustomizationMenuEventArgs e)
         {
             e.ShowCustomizationMenu = false;
+        }
+        #endregion
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SpreadSheetForm5 frm = new SpreadSheetForm5();
+            MenumItemClickMethod(frm, e, "SpreadSheetForm5");
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RichEditForm4 frm = new RichEditForm4();
+            MenumItemClickMethod(frm, e, "RichEditForm4");
         }
     }
 }
