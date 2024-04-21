@@ -30,14 +30,21 @@ namespace JustinPomaApp
 
         void schedulerStorage_AppointmentInserting(object sender, PersistentObjectCancelEventArgs e)
         {
-            this.schedulerControl1.Storage.SetAppointmentId(((Appointment)e.Object), nextId++);
+            try
+            {
+                this.schedulerControl1.Storage.SetAppointmentId(((Appointment)e.Object), nextId++);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void CalendarGanttForm_Load(object sender, EventArgs e)
         {
             InitResources();
             InitAppointments();
-            InitDependencies();
+            //InitDependencies();
         }
 
         private void InitDependencies()
@@ -63,12 +70,16 @@ namespace JustinPomaApp
             mappings.Caption = "Name";
             mappings.ParentId = "ParentId";
 
-            CustomResourceList.Add(new CustomResource(1, "Project Deployment", Color.PowderBlue, 0));
-            CustomResourceList.Add(new CustomResource(2, "Specifications", Color.PaleVioletRed, 1));
-            CustomResourceList.Add(new CustomResource(3, "Spike Solution", Color.PeachPuff, 1));
-            CustomResourceList.Add(new CustomResource(4, "Demos and Docs", Color.AliceBlue, 0));
-            CustomResourceList.Add(new CustomResource(5, "Demos", Color.FloralWhite, 4));
-            CustomResourceList.Add(new CustomResource(6, "Docs", Color.Honeydew, 4));
+            CustomResourceList.Add(new CustomResource(1, "PROJECT NAME: US1776", Color.PowderBlue, 0));
+            CustomResourceList.Add(new CustomResource(2, "GLASS RAILING: G062 SSA-CLEAR LAMINATED, PVF3", Color.PaleVioletRed, 1));
+            CustomResourceList.Add(new CustomResource(3, "GLASS RAILING: G602NP-CLEAR LAMINATED, PVF3", Color.PeachPuff, 1));
+            CustomResourceList.Add(new CustomResource(4, "MESH RAILING-MET 2 BASIS OF DESIGN", Color.LavenderBlush, 1));
+            CustomResourceList.Add(new CustomResource(5, "2 LINE PICKET RAIL; SDP", Color.LightCoral, 1));
+
+            CustomResourceList.Add(new CustomResource(6, "PROJECT NAME: TR1923", Color.AliceBlue, 0));
+            CustomResourceList.Add(new CustomResource(7, "2 LINE BELLY PICKET RAIL; PVF3", Color.FloralWhite, 6));
+            CustomResourceList.Add(new CustomResource(8, "3-LINE PICKET RAILING: PVF3", Color.Honeydew, 6));
+
             this.schedulerDataStorage1.Resources.DataSource = CustomResourceList;
         }
 
@@ -91,10 +102,12 @@ namespace JustinPomaApp
             mappings.PercentComplete = "PercentComplete";
 
             DateTime date = DateTime.Today.AddDays(2);
-            CustomAppointmentList.Add(new CustomAppointment(1, "Spec", 2, 0, 1, date, date.AddDays(3), 100));
-            CustomAppointmentList.Add(new CustomAppointment(2, "Spike", 3, 0, 2, date.AddDays(3), date.AddDays(5), 100));
-            CustomAppointmentList.Add(new CustomAppointment(3, "Documentation-Fundamentals", 4, 0, 3, date.AddDays(2), date.AddDays(6), 100));
-            CustomAppointmentList.Add(new CustomAppointment(4, "Documentation-Public API", 6, 0, 6, date.AddDays(7), date.AddDays(10), 0));
+
+            CustomAppointmentList.Add(new CustomAppointment(1, "Spec", 1, 2, 1, date, date.AddDays(3), 100));
+            CustomAppointmentList.Add(new CustomAppointment(2, "Spike", 2, 1, 2, date.AddDays(3), date.AddDays(5), 70));
+            CustomAppointmentList.Add(new CustomAppointment(3, "Documentation-Fundamentals", 3, 2, 3, date.AddDays(2), date.AddDays(6), 80));
+            CustomAppointmentList.Add(new CustomAppointment(4, "Documentation-Public API", 4, 2, 4, date.AddDays(4), date.AddDays(10), 10));
+
             this.nextId = (CustomAppointmentList.Max(a => a.Id)) + 1;
             this.schedulerDataStorage1.Appointments.DataSource = CustomAppointmentList;
         }
